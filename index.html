@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <a href="#" class="brand">Travel</a>
+        <div class="menu-btn"></div>
+        <div class="navigation">
+            <div class="navigation-items">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Explore</a>
+                <a href="#">Gallery</a>
+                <a href="#">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="home">
+        <video class="video-slide active" src="videos/flor1.mp4" autoplay muted loop></video>
+        <video class="video-slide" src="videos/flor2.mp4" autoplay muted loop></video>
+        <video class="video-slide" src="videos/flor3.mp4" autoplay muted loop></video>
+        <video class="video-slide" src="videos/flor4.mp4" autoplay muted loop></video>
+        <video class="video-slide" src="videos/flor5.mp4" autoplay muted loop></video>
+        <video class="video-slide" src="videos/flor6.mp4" autoplay muted loop></video>
+        <div class="content active">
+            <h1>Apresentação<br><span>conexões reais</span></h1>
+            <h2>Equipe: Maria Fernanda Testai, Thaís Ferreira, Juliana Camargo, Tuan Martins e Marcos Paulo.</h2>
+            <h2>Disciplina: Prática integrada 1</h2>
+            <h2>Docente: Juliana Moura</h2>
+        </div>
+
+        <div class="content">
+            <h1>Formulário<br><span>de Requisitos</span></h1>
+            <p>Um formulário de requisitos é um documento utilizado no processo de desenvolvimento de software (ou outros projetos) para coletar, organizar e formalizar as necessidades e expectativas dos usuários, clientes ou stakeholders. Ele serve como uma base para garantir que todos os envolvidos no projeto tenham uma compreensão clara e compartilhada do que será desenvolvido ou entregue.</p>
+            <a href="https://docs.google.com/document/d/1uTk40cRB7MjH2_y0mlGQ2hEiEIiZw2Me/edit">Link do Formulário</a>
+        </div>
+
+        <div class="content">
+            <h1>Plano<br><span>de trabalho</span></h1>
+            <p>Um plano de trabalho é um documento em que se registram as atividades, os objetivos e as tarefas necessárias para a performance de um profissional. Sua importância está diretamente relacionada com o alcance de propósitos.</p>
+            <a href="https://docs.google.com/document/d/1-5QMLKsQ9mu33DgHexCJR8cACG-WaqNp/edit">Link do Plano</a>
+        </div>
+
+        <div class="content">
+            <h1>Modelo<br><span>canvas</span></h1>
+            <p>É uma ferramenta de gerenciamento estratégico, que permite desenvolver e esboçar modelos de negócio novos ou existentes em uma única página.</p>
+            <a href="https://docs.google.com/spreadsheets/d/1L8jFTM3X_Lwnnp6a_a28i5hwK-1tGGHU/edit?gid=1021015745#gid=1021015745">Link do Canvas</a>
+        </div>
+
+        <div class="content">
+            <h1>Mapa<br><span>de riscos</span></h1>
+            <p>Um mapa de riscos é uma ferramenta usada para identificar, avaliar e visualizar os riscos associados a um determinado ambiente ou atividade.</p>
+            <a href="https://docs.google.com/document/d/1Kz7AhIDP69elbBiR6zBjSdDL5NbvhZ7vk9BmULCC3iM/edit">Link do Mapa</a>
+        </div>
+
+        <div class="content">
+            <h1>Game design<br><span>document</span></h1>
+            <p>O GDD (ou Game Design Document) é um documento contendo todas as informações relevantes do design de um jogo: temática, mecânicas, plataformas, inimigos, levels, entre outros.</p>
+            <a href="https://docs.google.com/document/d/1FZ733bbZc6OmghjxpnYz8EYO_9DYpnWCHrC3PvSm2dk/edit">Link do GDD</a>
+        </div>
+
+        <div class="media-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
+        </div>
+
+        <div class="slider-navigation">
+            <div class="nav-btn active"></div>
+            <div class="nav-btn"></div>
+            <div class="nav-btn"></div>
+            <div class="nav-btn"></div>
+            <div class="nav-btn"></div>
+            <div class="nav-btn"></div>
+        </div>
+    </section>
+
+    <script type="text/javascript">
+        const btns = document.querySelectorAll(".nav-btn");
+        const slides = document.querySelectorAll(".video-slide");
+        const contents = document.querySelectorAll(".content")
+
+        var sliderNav = function(manual){
+            btns.forEach((btn) => {
+                btn.classList.remove("active");
+            });
+
+            slides.forEach((slide) => {
+                slide.classList.remove("active");
+            });
+
+            contents.forEach((content) => {
+                content.classList.remove("active");
+            });
+
+            btns[manual].classList.add("active");
+            slides[manual].classList.add("active");
+            contents[manual].classList.add("active");
+        }
+
+        btns.forEach((btn, i) => {
+            btn.addEventListener("click", () => {
+                sliderNav(i);
+            });
+        });
+    </script>
+</body>
+</html>
